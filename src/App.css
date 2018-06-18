@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,300,400');
+
+body {
+  padding: 0;
+  font-family: 'Open Sans';
+  font-size: 1.5em;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: linear-gradient(-255deg, #B7F8DB 0%, #50A7C2 30%); */
+  background-image: linear-gradient(156deg, rgba(86,94,163,1) 0%, rgba(217,134,144,1) 32%, rgba(247,239,163,1) 100%);
+}
+
+.main {
+  box-shadow: 0px 3px 20px -3px rgba(0,0,0,0.65);
+}
+
+
+.title-container {
+  background-image: url('./img/bg.jpg');
+  height: 75vh;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.title-container-title {
+  color: #ff8457;
+  font-weight: 300;
+  font-family: 'Open Sans';
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: 2px;
+  padding-bottom: 100px;
+  text-shadow: -1px -2px 5px #3f3f3f;
+}
+
+.title-container-subtitle {
+  font-size:1.5em;
+  color: #eaa670;
+  font-style: italic;
+  text-align: center;
+}
+.input_form{
+  text-transform: capitalize;
+}
+
+.form-zero-container {
+  margin:0;
+  padding:0;
+}
+
+.form-container {
+  padding-top:5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffefd6;
+  opacity: 0.85;
+  height: 75vh;
+
+}
+
+.input_form{
+  margin: 25px 25px 30px 0px;
+  border: none;
+  border-bottom: 2px solid #1f445f;
+  opacity: 0.8;
+  box-sizing: border-box;
+  background-color: transparent;
+  width: 130px;
+  text-align: center;
+}
+
+::placeholder {
+  color: #393939;
+  opacity: 0.6;
+  font-weight: bold;
+
+}
+
+textarea:focus, input:focus, button:focus{
+    outline: none;
+}
+
+.inputs-button-div{
+  padding: 30px 0 0 0;
+}
+
+.btn_form {
+  outline: none;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #070b43;
+  opacity: 0.92;
+  border: none;
+  border-radius: 10px 3px;
+  display: flex;
+  width: 300px;
+  letter-spacing: 2px;
+  justify-content: center;
+}
+
+.btn_form:hover {
+  box-shadow: 0px 7px 12px -8px rgba(0,0,0,0.5);
+}
+
+.weather-component{
+    margin: 50px 0 0 0;
+    padding: 50px;
+}
+
+.weather-keys {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+.weather-values {
+  color: #ff7644;
+  font-size: 16PX;
+  padding: 10px;
+  text-align: justify;
+  letter-spacing: normal;
+}

@@ -1,0 +1,76 @@
+--------------------------------------------------------------------
+                        G U I D E . & . T I P S
+--------------------------------------------------------------------
+0. React-Create-App : this one is build with this React-Create-App CLI to avoid setting webpack
+1. Clean your space environment : don't need some of the files / folders or some codes
+3. Get Started !
+
+        ------------------------------------------------------
+                        TOOLS USED / FEATURES
+        ------------------------------------------------------
+
+              - NODEJS and NPM
+              - Create-React-App CLI
+                  ( react, react-dom,  babel, webpack ... )
+              - N O . R E D U X .
+              - https://openweathermap.org/api current Weather
+              - Bootstrap @3.3.7 stable instead of 4
+              - async, await ..
+
+        ------------------------------------------------------
+        ------------------------------------------------------
+
+ - /components : for UI Components
+ - /containers : for Components with actions and states ( APP is container)
+
+ REACT late tips optimising your code:
+      - states : BEFORE : when we needed state we had to declare our class
+                          with a constructor and super;
+                 NOW : we only need to declare state = { ... }
+
+       - if and else within jsx is bad practice;
+           instead use (as in components/Weather.js)
+           a 2016 notation :
+              <jsx>
+                  { objectTrue && objectTrue && <p>I am ONLY rendered cause the 2
+                    previous conditions are true </p>
+                  }
+              </jsx>
+      - Hide your api key with react-create-app:
+            - to your app root: create file : ".env"
+            - within this new file write your api such as:
+              REACT_APP_<NAME-YOUR-API-KEY> = ' <YOUR-API-KEY> '
+              NB: REACT_APP_ : is NEEDED and not optional
+                  it allows create-react-app to see and identify this variable.
+            - to access this variable in your app you'll need : process.env
+              ex: console.log(process.env.REACT_APP_<NAME-YOUR-API-KEY>) //<YOUR-API-KEY>
+          -----------------------------------------------------
+
+        - NB: STATEFULL COMPONENTS = CONTAINERS need to be declared as:
+                class MyComponent extends Components{
+                    render(){
+                      return ( ... )
+                    }
+                }
+
+              STATELESS COMPONENTS = without states, mostly receiving infos = props
+                  don't need to load all class dependencies , so it should be declared
+                  such as:
+                      const MyComponent = () => {
+                        return (
+                            ...
+                        )
+                      }
+
+                - if props are red ... this destroys all the code so get rid of them
+                - if you return one element div ( wrapping all other elements)
+                    then you could implicitly return this one = so get rid of curly
+                    braces and replace them with a pair of parentheses ( which implicit 'summon' the return )
+                    such as:
+                        const MyComponent = () => (
+                            ... YOUR UNIC JSX ELEMENT WRAPPING OR NOT OTHERS ...
+                        )
+                - if you return only one argument in this stateless component (here props ),
+                      you don't need those parentheses such as
+                      BASIC : const MyComponent = (props) => { ... }
+                      OPTIMISED : const MyComponent = props => { ... }
