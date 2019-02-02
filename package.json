@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://laurelinep.github.io/Wheather-App/",
   "devDependencies": {
-    "gh-pages": "^1.0.0",
+    "gh-pages": "^1.0.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
@@ -13,11 +13,22 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaurelineP/Weather-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaurelineP/Weather-App/issues"
+  },
+  "description": ""
 }
